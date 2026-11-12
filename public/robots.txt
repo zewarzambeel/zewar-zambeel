@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /cart
+Disallow: /checkout
+Disallow: /wish
+Disallow: /review
+Disallow: /s/
+
+Sitemap: https://zewarzambeel.com/sitemap.xml
