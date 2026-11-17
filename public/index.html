@@ -60,6 +60,16 @@ header{padding:10px 64px}header img{height:84px}
 .grid{max-width:1360px;gap:28px}
 .pdp{max-width:1200px}
 }
+/* Category navigation strip (category pages) */
+.cn{display:flex;gap:8px;overflow-x:auto;padding:12px 16px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.cn::-webkit-scrollbar{display:none}
+.cn::before,.cn::after{content:"";margin:auto}
+.cn a{flex:0 0 auto;display:flex;align-items:center;min-height:40px;padding:0 16px;border:1px solid #d9c9a8;border-radius:999px;background:#fff;color:#333;font-size:13px;font-weight:700;letter-spacing:.4px;white-space:nowrap}
+.cn a:hover{border-color:#a67a2a}
+.cn a.on{background:#a67a2a;border-color:#a67a2a;color:#fff}
+.cn a:focus-visible{outline:3px solid #111;outline-offset:2px}
+@media(min-width:760px){.cn{gap:12px;padding-top:18px}.cn a{min-height:44px;padding:0 22px;font-size:14px}}
+
 /* Floating WhatsApp contact button */
 .wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:#25D366;color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.24);font-weight:700;font-size:15px;line-height:1;transition:transform .18s ease,box-shadow .18s ease;-webkit-tap-highlight-color:transparent}
 .wa-float:hover{transform:translateY(-3px);box-shadow:0 7px 20px rgba(0,0,0,.28)}
@@ -76,9 +86,9 @@ header{padding:10px 64px}header img{height:84px}
 </a>
 <footer class="ft"><div class="fg"><div class="fb"><span class="brand fn">Zewar Zambeel</span><p>Beautiful artificial jewellery for every occasion, delivered across Pakistan.</p><div class="fs"><a id="fwa" href="#" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.6 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg></a><a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.3-1.6 1.7-1.6h1.7V3.9A21 21 0 0 0 14.4 3.8c-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.9V22h3.3z"/></svg></a><a href="https://www.tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.6 2h-3.2v13.3a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .8.1V9.4a6 6 0 1 0 5.1 5.9V8.6a7.4 7.4 0 0 0 4.3 1.4V6.8a4.3 4.3 0 0 1-4.3-4.8z"/></svg></a></div></div>
 <div><h4>Shop</h4><a href="/c/all">All Jewellery</a><a href="/wish">Wishlist</a><a href="/cart">My Cart</a></div>
-<div><h4>Customer Care</h4><a href="/review">Write a Review</a><a id="wa" href="#" target="_blank" rel="noopener">WhatsApp Us</a><a href="mailto:zewarzambeel@gmail.com">Email Us</a></div>
+<div><h4>Customer Care</h4><a href="/review">Write a Review</a><a id="wa" href="#" target="_blank" rel="noopener">WhatsApp Us</a><a href="mailto:info@zewarzambeel.com">Email Us</a></div>
 <div><h4>Policies</h4><button type="button" data-dlg="dx">Exchange Policy</button><button type="button" data-dlg="ds">Shipping Policy</button><span>Cash on Delivery &amp; JazzCash</span></div>
-<div><h4>Contact</h4><a id="fw2" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:zewarzambeel@gmail.com">zewarzambeel@gmail.com</a></div></div>
+<div><h4>Contact</h4><a id="fw2" href="#" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:info@zewarzambeel.com">info@zewarzambeel.com</a></div></div>
 <p class="fc">&copy; Zewar Zambeel &middot; Cash on Delivery &amp; JazzCash</p></footer>
 <dialog id="dx"><h3>Exchange Policy</h3><ul><li>Exchange request must be made within 2 days of receiving your order.</li><li>We exchange items that arrive damaged or are not the item you ordered. Please send clear photos on WhatsApp.</li><li>The item must be unused and in its original packing.</li><li>We offer a replacement, not a refund.</li></ul><button type="button" class="btn" data-x>Close</button></dialog>
 <dialog id="ds"><h3>Shipping Policy</h3><ul id="dsl"></ul><button type="button" class="btn" data-x>Close</button></dialog>
@@ -104,7 +114,9 @@ return `<div class="bn${b.every(x=>x.m)?' hm':''}"><div class="bt">${b.map(x=>{c
 function bsl(){clearInterval(window.bI);const t=$('.bt');if(!t||t.children.length<2)return;const n=t.children.length,ds=[...document.querySelectorAll('.bd i')],set=()=>{const k=Math.round(t.scrollLeft/t.clientWidth);ds.forEach((d,i)=>d.classList.toggle('on',i==k))};set();t.onscroll=set;
 t.addEventListener('pointerdown',()=>clearInterval(window.bI));
 window.bI=setInterval(()=>{if(!document.body.contains(t)){clearInterval(window.bI);return}if(document.hidden)return;t.scrollTo({left:((Math.round(t.scrollLeft/t.clientWidth)+1)%n)*t.clientWidth,behavior:'smooth'})},4000)}
-function cat(id){const c=C.find(x=>x.id==id);document.title=(c?c.name:'All Jewellery')+' | Zewar Zambeel';app(`<h1 class="t">${c?e(c.name):'All Jewellery'}</h1>${grid(c?P.filter(p=>p.category_id==id):P)}`)}
+function cn(id){if(!C.length)return '';return `<nav class="cn" aria-label="Categories"><a href="/c/all"${id==='all'?' class="on" aria-current="page"':''}>All</a>${C.map(c=>`<a href="/c/${c.id}/${sl(c.slug||c.name)}"${c.id==id?' class="on" aria-current="page"':''}>${e(c.name)}</a>`).join('')}</nav>`}
+function cnc(){const n=$('.cn'),a=n&&n.querySelector('.on');if(a)n.scrollLeft=a.offsetLeft-(n.clientWidth-a.offsetWidth)/2}
+function cat(id){const c=C.find(x=>x.id==id);document.title=(c?c.name:'All Jewellery')+' | Zewar Zambeel';app(`${cn(id)}<h1 class="t">${c?e(c.name):'All Jewellery'}</h1>${grid(c?P.filter(p=>p.category_id==id):P)}`);cnc()}
 function pdp(id){const p=prod(id);if(!p)return app('<p class="pad">Product not found.</p>');document.title=p.name+' | Zewar Zambeel';
 const o=p.compare_price>p.price,sel=(i,l,a)=>a.length?`<label>${l}<select id="${i}">${a.map(v=>`<option>${e(v)}</option>`).join('')}</select></label>`:'';
 app(`<div class="pdp"><div><img id="big" src="${e(p.images[0]||'')}" alt="${e(p.name)}"><div class="th">${p.images.map(u=>`<img src="${e(u)}" alt="" onclick="$('#big').src=this.src">`).join('')}</div></div><div><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px"><h1 style="font-size:22px">${e(p.name)}</h1>${hh(p.id).replace('class="hb','class="hb hp')}</div><div class="pr" style="font-size:18px;margin:6px 0">${o?`<s>${R(p.compare_price)}</s>`:''}<b>${R(p.price)}</b></div>${sel('sz','Size',p.sizes)}${sel('cl','Colour',p.colors)}<label>Quantity<input id="qt" type="number" min="1" max="20" value="1"></label><button class="btn" ${p.in_stock?'':'disabled'} onclick="add('${p.id}')">${p.in_stock?'Add to cart':'Sold out'}</button><p class="desc">${e(p.description||'')}</p>${pvr(p.id)}</div></div>`)}
