@@ -4,8 +4,8 @@
 header{background:#000;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:8px 16px;position:sticky;top:0;z-index:5}
 .sr{position:relative;flex:1 1 100%;order:3;margin:8px 0 2px}.sr span{position:absolute;left:15px;top:50%;transform:translateY(-50%);pointer-events:none;color:#777}.sr input{width:100%;margin:0;padding:11px 16px 11px 42px;border:0;border-radius:24px;background:#fff;font:inherit;-webkit-appearance:none;appearance:none}.sr input:focus{outline:2px solid #c9a24b}header img{height:56px;width:auto}.hr{display:flex;gap:8px;align-items:center}#cb,#wb{color:#c9a24b;font-size:18px;border:1px solid #c9a24b;border-radius:20px;padding:4px 14px}
 .bar{background:#f4efe6;padding:6px 0;font-size:13px;line-height:18px;height:30px;box-sizing:border-box;color:#7a1520;font-weight:600;overflow:hidden;white-space:nowrap}
-.bar .tk{display:inline-flex;width:max-content;animation:tk 30s linear infinite}.bar:hover .tk{animation-play-state:paused}.bar span{padding:0 28px}
-@keyframes tk{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.bar .tk{animation:none}}
+.bar .tkr{display:inline-flex;width:max-content;animation:tk 30s linear infinite}.bar:hover .tkr{animation-play-state:paused}.bar span{padding:0 28px}
+@keyframes tk{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.bar .tkr{animation:none}}
 .pad{padding:16px;max-width:640px;margin:auto}.hero{background:linear-gradient(135deg,#5a0f18,#8b1a28);color:#e8c875;text-align:center;padding:44px 16px}.hero h1{font:600 28px Georgia,serif}.hero p{color:#fff;margin:6px 0 16px}
 .btn{display:block;width:100%;background:#a67a2a;color:#fff;border:0;border-radius:24px;padding:13px;font-size:16px;cursor:pointer;text-align:center}.btn:disabled{opacity:.5}.hero .btn{display:inline-block;width:auto;padding:12px 32px}
 h2,h1.t{font:600 22px Georgia,serif;text-align:center;margin:24px 0 12px}.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -197,7 +197,7 @@ cart=[];save();app(`<div class="pad" style="text-align:center"><h2>Thank you! &#
 catch(x){$('#er').textContent=x.message;b.disabled=false;b.textContent='Place order'}}}
 function ticker(){const m=[`Free delivery on orders above ${R(S.free_delivery_min)}`,...(S.ticker_text||'').split(/[|\n]/).map(x=>x.trim()).filter(Boolean)],
 one=m.map(x=>`<span>&#10022; ${e(x)}</span>`).join(''),half=one.repeat(Math.max(2,Math.ceil(12/m.length)));
-$('#bar').innerHTML=`<div class="tk">${half+half}</div>`;$('#bar .tk').style.animationDuration=Math.max(20,m.join('').length*.3*Math.max(2,Math.ceil(12/m.length))/2)+'s'}
+$('#bar').innerHTML=`<div class="tkr">${half+half}</div>`;$('#bar .tkr').style.animationDuration=Math.max(20,m.join('').length*.3*Math.max(2,Math.ceil(12/m.length))/2)+'s'}
 let wish=[];try{wish=JSON.parse(localStorage.wish||'[]')}catch(x){}if(!Array.isArray(wish))wish=[];
 const hasW=id=>wish.some(x=>x==id),wsave=()=>{try{localStorage.wish=JSON.stringify(wish)}catch(x){}$('#wc').textContent=wish.length},
 hh=id=>`<span class="hb${hasW(id)?' on':''}" role="button" aria-label="Wishlist" data-id="${e(id)}" onclick="hw(event,'${e(id)}')">${hasW(id)?'♥':'♡'}</span>`;
