@@ -3,6 +3,7 @@
   "main": "worker/index.js",
   "compatibility_date": "2025-11-01",
   "previews": {},
+  "triggers": { "crons": ["0 */3 * * *"] },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",

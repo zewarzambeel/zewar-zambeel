@@ -1,6 +1,6 @@
 // Cloudflare Worker entry: builds real pages for products/categories and serves everything else from /public.
 import { handle, sitemap } from '../lib/ssr.js';
-import { handlePostex } from '../lib/postex.js';
+import { handlePostex, scheduledSync } from '../lib/postex.js';
 
 const STORE = 'https://ceoscxhxwanjaaaabhrc.supabase.co/storage/v1/object/public/';
 const IMMUTABLE = 'public, max-age=31536000, immutable';
@@ -30,5 +30,8 @@ export default {
     if (url.pathname === '/api/postex') return handlePostex(request, env);
     if (url.pathname === '/sitemap.xml') return sitemap();
     return handle({ request, env, next: () => env.ASSETS.fetch(request) });
+  },
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(scheduledSync(env).catch(() => {}));
   },
 };
